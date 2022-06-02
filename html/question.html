@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+        <!--title은 모든페이지에 대해 '고령환자를 위한 예진 서비스(가제)'로 통일-->
+        <title>Question</title>
+        <meta charset="utf-8">
     </head>
     <body>
+        <!--네비게이션 바 위치: 왼쪽 세로-->
+        <!--가능하다면 세줄(≡)을 눌렀을 때 등장, 버튼을 누르면 사라짐: 고령환자는 이기능이 어려울 수 있음-->
+        <!--각 카테고리를 누르면 세부질문 등장-->
         <nav>
-            <a href="home.html">Home</a>
+            <a href="home.html">홈</a>
+            <a href="question.html">증상부위</a>
+            <a href="question.html">증상</a>
+            <a href="question.html">사회력</a>
         </nav>
+
+        <!--[text] 제목(작게)-->
+        <h3>고령환자를 위한 예진 서비스 홈페이지</h3>
+        <hr/>
+
+        <!--[text] 질문-->
+        <h1>[번호] 이러저러한 것이 맞나요?</h1>
+        <!--[button] 질문을 읽어주는 소리기호-->
+        <!--질문 옆에 위치시킬 것-->
+
+        <!--[video] 질문 설명영상-->
+        <hr/>
+        <img src="C:\Users\DBLab\Desktop\pre_diagnosis\image\영상영역.png">
+        <hr/>
+
+        <!--[button] 답변 선택지-->
+        <!--box로 경계 표시-->
+        <!--답변이 저장되는 부분이므로 javascript 함수로 작성될 부분-->
+        <!--
+
+            선택지 유형에 따른 구현
+
+        -->
+
+        <!--[button][link] 이전/다음질문으로 이동하기-->
+        <a href="question.html">이전 질문으로</a>
+        <a href="question.html">다음 질문으로</a>
     </body>
 </html>
