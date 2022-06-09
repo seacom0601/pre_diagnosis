@@ -3,26 +3,28 @@ from django.db import models
 # Create your models here.
 
 
-class Question(models.Model):
-    question = models.CharField(max_length=50)
-
-    option1 = models.CharField(max_length=50)
+# 부위 테이블
+class Sickpart(models.Model):
+    name = models.CharField(max_length=20, blank=False, primary_key=True)
 
     def __str__(self):
-        return f'[{self.pk}]  {self.question}'
+        return self.name
 
 
+# 선지 테이블
 class Option(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    option = models.TextField(max_length=20)
+    option = models.CharField(max_length=50, blank=False, primary_key=True)
 
     def __str__(self):
         return self.option
 
 
-class AnsUser(models.Model):
-    phone_num = models.CharField(max_length=13, default="000-0000-0000")
-    answer = models.CharField(default="", max_length=20, null=True, blank=True)
+# 질문 테이블
+class Question(models.Model):
+    question = models.CharField(max_length=200, blank=False, unique=True)
+    video = models.CharField(max_length=200, null=True)
+    option = models.ForeignKey(Option, on_delete=models.RESTRICT)
+    sick_part = models.ForeignKey(Sickpart, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.phone_num
+        return f'[{self.sick_part}] {self.question}'
