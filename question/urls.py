@@ -21,6 +21,8 @@ app_name = 'question'
 urlpatterns = [
 
     path('sick_part/<int:id>/', views.sick_part, name='sick_part'),
-    path('sick_part/sick_part_list', views.sick_part_list, name='sick_part_list'),
-    path('<int:question_pk>/', views.single_question, name='single_question')
+    path('sick_part/question_list/', views.question_list, name='question_list'),
+    path('<int:question_id>/', views.single_question, name='single_question'),
+    path('single_answer/', views.single_answer, name='single_answer'),
+    path('next_question/', views.next_question, name='next_question')
 ]
