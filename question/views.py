@@ -38,13 +38,16 @@ def question_list(request):
 
 def single_question(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'question template/question.html', {'question': question})
+    option = question.option
+    option_ = option.option
+    option_list = option_.split(',')
+    return render(request, 'question template/question.html', {'question': question, 'option':option_list})
 
 
-def single_answer(request, question_id):
-    if type(request.POST) == str:
-        user = User.objects.get(pk=userid)
-        user.answer = user.answer + ',' + request.POST['option']
+def single_answer(request):
+    user = User.objects.get(pk=userid)
+    user.answer = user.answer + ',' + request.POST['inlineRadioOptions']
+    user.save()
 
     return HttpResponseRedirect(reverse('question:next_question'))
 
