@@ -37,3 +37,5 @@
   
 #서버 실행
 >python manage.py runserver
+```
+- 홈페이지 주소 입력 후 
