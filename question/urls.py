@@ -1,4 +1,4 @@
-"""pre_diagnosis URL Configuration
+"""project_final URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -16,7 +16,13 @@ Including another URLconf
 from django.urls import path
 from . import views
 
+app_name = 'question'
+
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('question/<int:pk>', views.question, name='question'),
+
+    path('sick_part/<int:id>/', views.sick_part, name='sick_part'),
+    path('sick_part/question_list/', views.question_list, name='question_list'),
+    path('<int:question_id>/', views.single_question, name='single_question'),
+    path('single_answer/', views.single_answer, name='single_answer'),
+    path('next_question/', views.next_question, name='next_question')
 ]
