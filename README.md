@@ -12,11 +12,17 @@
   * `form.xlsx`: 차트 form
   * `main.py`: 차트화 시키는 파이썬 프로그램
   * `requirements.txt`: 해당 프로그램 실행을 위한 요구사항
+- `project_final`: 전체 프로그램을 구성하는 django project 폴더
 - `home`: 홈 화면을 구성하는 django app 폴더
   * `static/home`: html 구성에 필요한 이미지, css, js 파일
   * `templates/home template`: 홈 화면 html template
-- `project_final`: 전체 프로그램을 구성하는 django project 폴더
 - `question`: 질문 페이지를 구성하는 django app 폴더
   * `static/question`: html 구성에 필요한 이미지, css, js 파일
   * `templates/question template`: 홈 화면 html template
 ## 4. 실행환경
+`python==3.9.7`
+`django==5.1.3`
+`certifi==2022.5.18.1`
+`et-xmlfile==1.1.0`
+`openpyxl==3.0.10`
+`wincertstore==0.2`
