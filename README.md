@@ -20,9 +20,20 @@
   * `static/question`: html 구성에 필요한 이미지, css, js 파일
   * `templates/question template`: 홈 화면 html template
 ## 4. 실행환경
-`python==3.9.7`
-`django==5.1.3`
-`certifi==2022.5.18.1`
-`et-xmlfile==1.1.0`
-`openpyxl==3.0.10`
-`wincertstore==0.2`
+`python==3.9.7`  
+`django==5.1.3`  
+`certifi==2022.5.18.1`  
+`et-xmlfile==1.1.0`  
+`openpyxl==3.0.10`  
+`wincertstore==0.2`  
+## 5. 사용방법
+- 프로젝트 폴더(pre_diagnosis) 내에서 django 실행
+```bash
+#migration 진행 (이미 진행했다면 skip)
+>python manage.py migrate
+  
+#admin 계정 생성
+>python manage.py createuser
+  
+#서버 실행
+>python manage.py runserver
