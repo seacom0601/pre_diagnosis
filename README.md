@@ -8,15 +8,15 @@
 고령환자를 위한 예진 서비스를 웹페이지 형태로 제공하는 프로그램입니다.
 
 ## 3. 폴더 및 파일 구성
-- chart_gen: 저장된 예진 데이터를 차트화 시켜주는 파이썬 프로그램
-  * form.xlsx: 차트 form
-  * main.py: 차트화 시키는 파이썬 프로그램
-  * requirements.txt: 해당 프로그램 실행을 위한 요구사항
-- home: 홈 화면을 구성하는 django app 폴더
-  * static/home: html 구성에 필요한 이미지, css, js 파일
-  * templates/home template: 홈 화면 html template
-- project_final: 전체 프로그램을 구성하는 django project 폴더
-- question: 질문 페이지를 구성하는 django app 폴더
-  * static/home: html 구성에 필요한 이미지, css, js 파일
-  * templates/home template: 홈 화면 html template
+- `chart_gen`: 저장된 예진 데이터를 차트화 시켜주는 파이썬 프로그램
+  * `form.xlsx`: 차트 form
+  * `main.py`: 차트화 시키는 파이썬 프로그램
+  * `requirements.txt`: 해당 프로그램 실행을 위한 요구사항
+- `home`: 홈 화면을 구성하는 django app 폴더
+  * `static/home`: html 구성에 필요한 이미지, css, js 파일
+  * `templates/home template`: 홈 화면 html template
+- `project_final`: 전체 프로그램을 구성하는 django project 폴더
+- `question`: 질문 페이지를 구성하는 django app 폴더
+  * `static/question`: html 구성에 필요한 이미지, css, js 파일
+  * `templates/question template`: 홈 화면 html template
 ## 4. 실행환경
